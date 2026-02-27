@@ -1,0 +1,9 @@
+1. Open This Folder " MentalHealthPrediction " In VScode.
+2. Now Open terminal and give these all commands in proper sequence :
+     (i) python -m venv .venv
+    (ii) .\.venv\Scripts\activate
+   (iii) pip install django
+    (iv) pip install pandas
+     (V) pip install scikit-learn
+    (vi) python manage.py migrate
+   (vii) python manage.py runserver

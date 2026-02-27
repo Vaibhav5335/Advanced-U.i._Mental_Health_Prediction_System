@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card text-center">
+            <div class="card-body p-5">
+                <i class="fas fa-brain fa-5x text-primary mb-4"></i>
+                <h1 class="card-title mb-4">Student Mental Health Prediction System</h1>
+                <p class="card-text lead mb-5">
+                    Welcome to our advanced mental health assessment platform. 
+                    Get personalized insights about your mental well-being using machine learning.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <a href="{% url 'login' %}" class="btn btn-primary btn-lg me-md-2">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                    <a href="{% url 'register' %}" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-user-plus"></i> Register
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

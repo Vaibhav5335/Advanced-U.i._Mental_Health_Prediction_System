@@ -1,75 +1,110 @@
-# Mental-Health-Prediction-System
-Mental Health Prediction System is a Django + Python web app that predicts student mental health from inputs like sleep, study time, meals, social media, activity, substance use, and academics. It includes login/registration, stores prediction history, and uses a trained scikit-learn model to generate reliable category-based results well.
+# 🧠 Mental-Health-Prediction-System  
+### *A Full-Stack Machine Learning Web Application for Intelligent Mental Health Analysis*
 
-# 🧠 Mental Health Prediction System
+The **Mental Health Prediction System (MHPS)** is a complete full-stack web application built using **Django and Machine Learning** to predict a user's mental health condition based on lifestyle and behavioral inputs such as sleep, study time, social activity, and more.
 
-### A Full-Stack Machine Learning Web Application
+This project demonstrates a real-world integration of:
 
----
+- 🌐 Web Development (Frontend + Backend)  
+- 🤖 Machine Learning Model Deployment  
+- 🔐 User Authentication & Security  
+- 📊 Data Storage & Prediction Tracking  
 
-## 📌 Overview
-
-The **Mental Health Prediction System** is a full-stack web application built using **Django** and **Machine Learning** that predicts a user's mental health condition based on input parameters.
-
-This project combines:
-
-* 🌐 **Web Development (Frontend + Backend)**
-* 🤖 **Machine Learning Model Training**
-* 🧩 **User Authentication System**
-* 📊 **Prediction Storage & Analysis**
-
-It is designed as a **complete portfolio-level project**, demonstrating end-to-end development — from data processing to deployment-ready architecture.
+Designed as a **portfolio-level project**, it showcases an end-to-end pipeline — from model training to real-time predictions and persistent data storage.
 
 ---
 
-## 🚀 Key Features
+<p align="center">
+  <strong>⚡ Mental Health AI System</strong><br/>
+  <em>Smart Predictions • Secure System • Real-World Impact</em>
+</p>
 
-### 🔐 Authentication System
-
-* User Registration
-* Secure Login & Logout
-* Password hashing using Django authentication system
-
-### 🧠 Mental Health Prediction
-
-* Machine learning model trained using dataset
-* Real-time prediction via web interface
-* Input-based prediction logic
-
-### 📊 Data Management
-
-* Stores prediction results in database
-* Tracks user activity
-* SQLite database integration
-
-### 🎯 User Experience
-
-* Clean and simple UI
-* Interactive forms
-* Responsive templates
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python"/>
+  <img src="https://img.shields.io/badge/Django-Web%20Framework-green?style=flat-square&logo=django"/>
+  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=flat-square&logo=sqlite"/>
+  <img src="https://img.shields.io/badge/Authentication-Secure-success?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square"/>
+</p>
 
 ---
 
-## 🏗️ Project Architecture
+## 📋 Table of Contents
+
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [Technology Stack](#-technology-stack)
+- [Architecture](#-architecture)
+- [Machine Learning Module](#-machine-learning-module)
+- [Application Flow](#-application-flow)
+- [Core Modules](#-core-modules)
+- [Database Design](#-database-design)
+- [UI & UX Design](#-ui--ux-design)
+- [Security](#-security-features)
+- [Getting Started](#-getting-started)
+- [Use Cases](#-use-cases)
+- [Future Enhancements](#-future-enhancements)
+- [Project Structure](#-project-structure)
+
+---
+
+## 🌟 Overview
+
+The **Mental Health Prediction System** is a **full-stack intelligent application** that leverages machine learning to analyze user inputs and predict mental health conditions.
+
+Users provide lifestyle and behavioral data such as:
+
+- Sleep patterns  
+- Study duration  
+- Eating habits  
+- Social media usage  
+- Physical activity  
+- Substance usage  
+- Academic performance  
+
+The system processes this data through a trained ML model and generates **accurate, category-based predictions**, which are then stored for tracking and analysis.
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|--------|------------|
+| 🔐 **Authentication System** | Secure user registration, login, and session management |
+| 🧠 **ML Prediction Engine** | Real-time mental health prediction using trained model |
+| 📊 **Prediction History** | Stores user predictions with timestamps |
+| 🗂 **Data Management** | Structured storage using Django ORM |
+| 🎯 **User-Friendly UI** | Clean interface with interactive forms |
+
+---
+
+## 🛠 Technology Stack
+
+| Layer | Technology | Purpose |
+|------|-----------|--------|
+| **Frontend** | HTML5, CSS3, Django Templates | UI rendering |
+| **Backend** | Python, Django | Application logic |
+| **Machine Learning** | Pandas, NumPy, Scikit-learn, Joblib | Model training & prediction |
+| **Database** | SQLite | Data persistence |
+| **Authentication** | Django Auth System | Security & access control |
+
+---
+
+## 🏗 Architecture
+
+The system follows a **Django MVC architecture integrated with ML layer**:
 
 ```
-MentalHealthPrediction/
-│
-├── MHPS/                  # Main project configuration
-│   └── urls.py
-│
-├── prediction/            # Core app
-│   ├── models.py          # Database models
-│   ├── views.py           # Business logic
-│   ├── urls.py            # Routing
-│
-├── templates/             # HTML UI files
-├── static/                # CSS/JS assets
-│
-├── train_model.py         # ML model training script
-├── db.sqlite3             # Database
-├── manage.py              # Django entry point
+User Input → Django Views → ML Model → Prediction → Database → UI Display
 ```
+
+### Layers:
+
+1. **Presentation Layer** → HTML templates & forms  
+2. **Application Layer** → Django views & routing  
+3. **ML Layer** → Model prediction logic  
+4. **Data Layer** → SQLite database storage  
 
 ---
 
@@ -77,206 +112,222 @@ MentalHealthPrediction/
 
 ### ⚙️ Model Training
 
-The ML model is trained using:
+The ML model is built using:
 
-* **Pandas** → Data processing
-* **NumPy** → Numerical computation
-* **Scikit-learn / Joblib** → Model building & saving
-
-### 🔁 Workflow
-
-1. Dataset is loaded
-2. Data preprocessing is applied
-3. Model is trained
-4. Model is saved using `joblib`
-5. Django loads the model for predictions
+- **Pandas** → Data preprocessing  
+- **NumPy** → Numerical operations  
+- **Scikit-learn** → Model training  
+- **Joblib** → Model serialization  
 
 ---
 
-## 🖥️ Tech Stack
+### 🔄 ML Workflow
 
-### 🌐 Frontend
-
-* HTML5
-* CSS3
-* Django Templates
-
-### ⚙️ Backend
-
-* Python
-* Django Framework
-
-### 🤖 Machine Learning
-
-* Pandas
-* NumPy
-* Joblib
-* Scikit-learn (assumed from structure)
-
-### 🗄️ Database
-
-* SQLite (default Django DB)
+```
+1. Load dataset
+2. Preprocess data
+3. Train ML model
+4. Save model using joblib
+5. Load model in Django
+6. Perform predictions in real-time
+```
 
 ---
 
 ## 🔄 Application Flow
 
-1. User registers an account
-2. Logs into the system
-3. Navigates to prediction page
-4. Enters required inputs
-5. ML model processes inputs
-6. Prediction result is displayed
-7. Result is saved in database
+1. User registers an account  
+2. Logs into the system  
+3. Navigates to prediction page  
+4. Inputs required parameters  
+5. Backend sends data to ML model  
+6. Prediction is generated  
+7. Result displayed to user  
+8. Result stored in database  
 
 ---
 
-## 📂 Core Components Explained
+## 📦 Core Modules
 
 ### 📌 `views.py`
+- Handles authentication  
+- Processes form inputs  
+- Loads ML model  
+- Returns prediction results  
 
-Handles:
-
-* Authentication logic
-* Form handling
-* Prediction processing
-* Rendering templates
+---
 
 ### 📌 `models.py`
+- Defines database schema  
+- Stores prediction results  
 
-Defines:
-
-* PredictionResult model
-* Database structure
+---
 
 ### 📌 `train_model.py`
+- Trains ML model  
+- Saves model for deployment  
 
-* Trains machine learning model
-* Saves trained model for later use
+---
 
 ### 📌 `urls.py`
-
-* Maps routes to views
-* Controls navigation
-
----
-
-## 🎨 UI Features
-
-* Clean welcome page
-* Login & registration forms
-* Prediction interface
-* User-friendly navigation
+- Routes user requests  
+- Controls navigation  
 
 ---
 
-## ⚡ Installation & Setup
+## 🗄 Database Design
+
+### 🧾 PredictionResult Table
+
+- User reference  
+- Input parameters  
+- Prediction result  
+- Timestamp  
+
+---
+
+## 🎨 UI & UX Design
+
+- Clean homepage  
+- Login & registration pages  
+- Prediction input form  
+- Result display page  
+- Simple and intuitive navigation  
+
+---
+
+## 🔐 Security Features
+
+- Django authentication system  
+- Password hashing  
+- Session management  
+- Protected routes (login required)  
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.x  
+- Django  
+
+---
 
 ### 1️⃣ Clone Repository
-
 ```bash
 git clone https://github.com/your-username/mental-health-prediction.git
 cd mental-health-prediction
 ```
 
 ### 2️⃣ Create Virtual Environment
-
 ```bash
 python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+source venv/bin/activate
+venv\Scripts\activate
 ```
 
 ### 3️⃣ Install Dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4️⃣ Run Migrations
-
 ```bash
 python manage.py migrate
 ```
 
-### 5️⃣ Train Model (Optional if not pre-trained)
-
+### 5️⃣ Train Model (Optional)
 ```bash
 python train_model.py
 ```
 
 ### 6️⃣ Run Server
-
 ```bash
 python manage.py runserver
 ```
 
 ### 7️⃣ Open in Browser
-
 ```
 http://127.0.0.1:8000/
 ```
 
 ---
 
-## 📊 Database Schema
+## 🎯 Use Cases
 
-### 🧾 PredictionResult
-
-* User reference
-* Input data
-* Prediction output
-* Timestamp
-
----
-
-## 🔐 Security Features
-
-* Password hashing (Django built-in)
-* Authentication middleware
-* Login-required routes
+- 🧠 Mental health awareness tools  
+- 🎓 ML + Django learning projects  
+- 💼 Portfolio demonstration  
+- 🔬 Research and experimentation  
 
 ---
 
 ## 🌟 Highlights
 
-✔ Full-stack project from scratch
-✔ Machine learning integration
-✔ Clean MVC architecture
-✔ Real-world use case
-✔ Beginner to intermediate level project
+✔ Full-stack ML application  
+✔ Real-time prediction system  
+✔ Secure authentication system  
+✔ Data persistence & tracking  
+✔ Real-world use case  
 
 ---
 
-## 🧩 Future Enhancements
+## 🔮 Future Enhancements
 
-* 📈 Add advanced ML models
-* 📊 Dashboard with analytics
-* 🌍 Deployment on cloud (AWS/Heroku)
-* 📱 Mobile responsive UI
-* 🧠 Deep Learning integration
+- 📊 Advanced analytics dashboard  
+- 🤖 Deep learning integration  
+- 🌐 Cloud deployment (AWS/Render)  
+- 📱 Fully responsive UI  
+- 📈 Model accuracy improvements  
+
+---
+
+## 📁 Project Structure
+
+```
+MentalHealthPrediction/
+│
+├── MHPS/
+│   └── urls.py
+│
+├── prediction/
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│
+├── templates/
+├── static/
+│
+├── train_model.py
+├── db.sqlite3
+├── manage.py
+└── README.md
+```
 
 ---
 
 ## 👨‍💻 Author
 
-**Vaibhav Sharma**
-
-* Passionate Full Stack Developer & ML Enthusiast
-* Built this project from scratch as part of learning & portfolio
+**Vaibhav Sharma**  
+*Full Stack Developer | ML Enthusiast*
 
 ---
 
 ## 📜 License
 
-This project is open-source and available under the **MIT License**.
+This project is licensed under the **MIT License**.
 
 ---
 
 ## 💡 Final Note
 
-This project demonstrates the power of combining **web development + machine learning** to solve real-world problems like mental health awareness.
+> Combining **Machine Learning + Web Development** unlocks powerful real-world applications.
 
-If you found this helpful ⭐, consider giving it a star!
+This project is a strong step toward building **intelligent, scalable, and impactful AI systems 🚀**
 
 ---
+
+<p align="center">
+  Built with ❤️ using Django & Machine Learning<br/>
+  <strong>Mental Health Prediction System</strong> — Intelligent Insights for Better Wellbeing
+</p>
